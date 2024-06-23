@@ -1,10 +1,11 @@
-import type { ReactNode, HtmlHTMLAttributes } from "react";
+import type { ReactNode, HtmlHTMLAttributes, MouseEventHandler } from "react";
 
 import styles from "./Modal.module.css";
 
 interface IModalProps extends HtmlHTMLAttributes<HTMLDivElement> {
   show: boolean;
   children: ReactNode;
+  onMouseDown?: MouseEventHandler<HTMLDivElement>;
 }
 
 const Modal = ({ show, children, ...rest }: IModalProps) => {

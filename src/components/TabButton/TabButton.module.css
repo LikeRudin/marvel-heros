@@ -4,10 +4,13 @@
   border: none;
   outline: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .selected {
-  background: var(--color-marvel-red);
+  background-color: var(--color-marvel-red);
   color: white;
 }
 
@@ -17,5 +20,5 @@
 }
 
 .hover {
-  background: var(--color-light-gray);
+  background-color: var(--color-light-gray);
 }
