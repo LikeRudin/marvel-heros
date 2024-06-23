@@ -1,0 +1,21 @@
+.button {
+  font-size: var(--font-size-h6);
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.selected {
+  background: var(--color-marvel-red);
+  color: white;
+}
+
+.notSelected {
+  background: transparent;
+  color: black;
+}
+
+.hover {
+  background: var(--color-light-gray);
+}
