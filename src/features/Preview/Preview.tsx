@@ -54,7 +54,13 @@ const Preview = ({
         </button>
         <div className={styles.profileContainer}>
           <ProfileImage name={name} thumbnail={thumbnail} />
-          <Description id={id} description={description} urls={urls} />
+          <Description
+            id={id}
+            description={description}
+            urls={urls}
+            thumbnail={thumbnail}
+            name={name}
+          />
         </div>
         <div className={styles.tabContainer}>
           <div className={styles.tabButtonContainer}>
