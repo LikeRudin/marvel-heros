@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  height: 90vh;
+  position: relative;
+  background-color: white;
+}
+
+.profileContainer {
+  height: 40%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.tabContainer {
+  position: relative;
+  margin-top: 3rem;
+  height: 50%;
+  overflow-y: auto;
+  border: 0.7rem solid lightblue;
+  background-color: rgba(173, 215, 230, 0.2);
+}
+
+.tabButtonContainer {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  z-index: 500;
+  background-color: white;
+}
+.tabButtonContainer > button {
+  width: 5rem;
+  height: 2rem;
+}
+
+.tabWrapper {
+  height: inherit;
+  overflow-y: auto;
+  height: 90%;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  cursor: pointer;
+  border: none;
+
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  font-size: large;
+  border-radius: 0.4rem;
+
+  transition: color 0.5s ease;
+}
+
+.closeButton:hover {
+  background-color: red;
+  color: white;
+}
