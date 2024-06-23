@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  white-space: normal;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 13vw;
+  height: auto;
+  font-size: 1.5rem;
+  white-space: normal;
+}
+
+.thumbnail > img {
+  width: 100%;
+  border-radius: 1rem;
+}
