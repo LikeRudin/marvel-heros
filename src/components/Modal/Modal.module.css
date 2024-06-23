@@ -1,0 +1,42 @@
+.wrapper {
+  background: rgba(0, 0, 0, 0.7);
+
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: visibility 0.2s linear, opacity 0.2s linear;
+
+  & > * {
+    transition: transform 0.3s ease;
+  }
+}
+
+.modalVisible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalHidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modlaVisible > * {
+  transform: translate(0, 0);
+}
+
+.modalHidden > * {
+  transform: translate(0, -5%);
+}
+
+.wrapper > * {
+  transition: transform 0.3s ease;
+}
