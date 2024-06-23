@@ -16,7 +16,7 @@ export const fetchHeros = async () => {
   return (json as HerosApiResponse).data.results;
 };
 
-export const fetchOneHeroDetails = async (id: number) => {
+export const fetchOneHeroDetails = async (id: number | string) => {
   const [comicJson, seriesJson, eventJson, storyJson] = await Promise.all([
     fetch(
       `https://marvel-proxy.nomadcoders.workers.dev/v1/public/characters/${id}/comics`
