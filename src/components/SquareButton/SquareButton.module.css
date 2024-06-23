@@ -1,0 +1,22 @@
+.squareButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: none;
+
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  font-size: large;
+  border-radius: 0.4rem;
+
+  transition: color 0.5s ease;
+}
+
+.squareButton:hover {
+  background-color: red;
+  color: white;
+}
