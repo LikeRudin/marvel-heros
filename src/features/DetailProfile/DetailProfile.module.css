@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+}
+
+.homeButton {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.profile {
+  display: flex;
+  padding: 5rem 10rem;
+  gap: 4rem;
+}
