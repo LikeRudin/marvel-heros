@@ -1,15 +1,15 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import type { MouseEvent } from "react";
 
 import { Result } from "../../types";
 
-import { Modal, TabButton } from "../../components";
-
-import Tab from "./Tab/Tab";
+import { Modal, SquareButton, TabButton } from "../../components";
 
 import styles from "./Preview.module.css";
-import ProfileImage from "./ProfileImage/ProfileImage";
+import ProfileImage from "../ProfileImage/ProfileImage";
 import Description from "./Description/Description";
+import PreviewTab from "./PreviewTab/PreviewTab";
+import { useTabs } from "../../hooks";
 
 export type TabNamesType = "Stories" | "Series" | "Events" | "Comics";
 
@@ -31,12 +31,13 @@ const Preview = ({
   urls,
   description,
 }: IPreviewProps) => {
-  const [tabName, setTabName] = useState<TabNamesType>("Stories");
-
-  const handleClickStoriesTab = () => setTabName("Stories");
-  const handleClickSeriesTab = () => setTabName("Series");
-  const handleClickEventsTab = () => setTabName("Events");
-  const handleClickComicsTab = () => setTabName("Comics");
+  const {
+    tabName,
+    handleClickComicsTab,
+    handleClickEventsTab,
+    handleClickSeriesTab,
+    handleClickStoriesTab,
+  } = useTabs();
 
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -49,9 +50,7 @@ const Preview = ({
   return (
     <Modal show={show}>
       <div className={styles.wrapper} onMouseDown={handleMouseDown}>
-        <button className={styles.closeButton} onClick={close}>
-          close
-        </button>
+        <SquareButton onClick={close}>close</SquareButton>
         <div className={styles.profileContainer}>
           <ProfileImage name={name} thumbnail={thumbnail} />
           <Description
@@ -90,7 +89,7 @@ const Preview = ({
             </TabButton>
           </div>
           <div className={styles.tabWrapper}>
-            <Tab
+            <PreviewTab
               tabName={tabName}
               comics={comics}
               series={series}
