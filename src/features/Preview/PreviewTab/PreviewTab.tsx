@@ -1,7 +1,7 @@
 import { Comics, Events, Series, Stories } from "../../../types";
 import { TabNamesType } from "../Preview";
 
-import styles from "./Tab.module.css";
+import styles from "./PreviewTab.module.css";
 
 interface ITabProps {
   tabName: TabNamesType;
@@ -11,7 +11,13 @@ interface ITabProps {
   stories: Stories;
 }
 
-const Tab = ({ tabName, comics, series, events, stories }: ITabProps) => {
+const PreviewTab = ({
+  tabName,
+  comics,
+  series,
+  events,
+  stories,
+}: ITabProps) => {
   let items = [];
   switch (tabName) {
     case "Comics":
@@ -43,4 +49,4 @@ const Tab = ({ tabName, comics, series, events, stories }: ITabProps) => {
   );
 };
 
-export default Tab;
+export default PreviewTab;

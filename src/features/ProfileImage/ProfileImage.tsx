@@ -1,4 +1,4 @@
-import type { Thumbnail } from "../../../types";
+import type { Thumbnail } from "../../types";
 
 import styles from "./ProfileImage.module.css";
 
