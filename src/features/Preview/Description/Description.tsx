@@ -26,7 +26,7 @@ const Description = ({
       <Link
         className={styles.detailsLink}
         to={`/character/${id}`}
-        state={{ thumbnail, name }}
+        state={{ thumbnail, name, description }}
       >
         See Details
       </Link>
